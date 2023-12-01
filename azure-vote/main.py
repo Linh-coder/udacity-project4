@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 handler = AzureLogHandler(
     connection_string="InstrumentationKey=e584ea59-187c-42fe-8c37-54fdb1401217"
 )
-handler.setFormatter(logging.Formatter("%(traceId)s %(spanId)s %(message)s"))
+handler.setFormatter(logging.Formatter("%(message)s"))
 logger.addHandler(handler)
 # Logging custom Events
 logger.addHandler(
